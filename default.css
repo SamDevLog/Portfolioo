@@ -847,6 +847,65 @@ footer {
   }
 }
 
+
+
+@media screen and (max-width:375px) {
+  #preview-shadow{
+    max-width: 270px;
+    height: 175px;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+
+  #preview{
+    width: 270px;
+    padding: 10px;    
+  }
+}
+
+@media screen and (max-width:320px){
+  h1{
+    font-size: 50px;
+  }
+
+  .intro-wrapper{
+    grid-template-columns: minmax(300px, 1fr);
+  }
+
+  #preview-shadow{
+    max-width: 300px;
+    height: 160px;
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+
+  #preview{
+    width: 230px;
+    height: 150px;
+    padding: 10px;    
+  }
+
+  #preview h3{
+    margin: 15px 0;
+  }
+
+  .about-wrapper{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .post-wrapper{
+    grid-template-columns: repeat(auto-fit, 290px);
+  }
+
+  .scrollUpBtn{
+    right: 10px;
+  }
+
+  .scrollUpBtn i{
+    font-size: 40px;
+  }
+}
+
 #toast {
   visibility: hidden;
   max-width: 50px;
@@ -895,6 +954,8 @@ footer {
 #toast.show #desc {
   animation: unhide 3.5s 0.7s ease-in;
 }
+
+/* --------Animations-------- */
 
 @keyframes unhide {
   from {
