@@ -78,6 +78,7 @@ function scrollToTop() {
         behavior: "smooth"
     });
 }
+
 scrollToTopBtn.addEventListener("click", scrollToTop);
 
 let observer = new IntersectionObserver(callback);
@@ -86,37 +87,54 @@ observer.observe(target);
 
 
 // Get the modal
-var modal = document.getElementById("myModal");
+const modal = document.getElementById("myModal");
+
+// Get the model-content divs
+const modelContent = document.querySelectorAll('.modal-content')
 
 // Get the button that opens the modal
-var btns = document.querySelectorAll("#btn");
+const btns = document.querySelectorAll("#btn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+const closeBtn = document.getElementsByClassName("close");
 
-// When the user clicks on the button, open the modal
+
+// When the user clicks on the button, open the modal and disable scroll of the page under overlay
+const body = document.body;
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener('click', function(){
     modal.style.display = "block";
+    modelContent[i].style.display = "flex";
+    body.classList.toggle('noscroll');
   });
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+for (const btn of closeBtn) {
+  btn.onclick = function() {
+    modal.style.display = "none";
+    btn.parentElement.parentElement.style.display = "none";
+    body.classList.remove('noscroll');
+  }
 }
+
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target === modal) {
     modal.style.display = "none";
+    body.classList.remove('noscroll')
+    modal.children.forEach((child)=>{
+      if (child.classList.contains('modal-content')) {
+        child.style.display = "none"
+      }
+    })
   }
 }
 
 // listen to the form submission
 document.getElementById("contact-form").addEventListener("submit", function (event) {
   event.preventDefault();
-
   const serviceID = "service_5bstzba";
   const templateID = "contact_form";
 
@@ -149,3 +167,4 @@ function launch_toast() {
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
 }
+

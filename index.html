@@ -27,7 +27,7 @@
                         <div id="dot-3" class="browser-dot"></div>
                     </div>
                     <ul id="navigation">
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contact"><i class="far fa-envelope fa-2x"></i></a></li>
                     </ul>
                 </div>
                 <div class="left-column">
@@ -67,54 +67,7 @@
 
     <section class="s2">
         <div class="main-container">
-            <div class="about-wrapper">
-                <div class="about-me">
-                    <h4>More About Me</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dicta vel sed officia! Magni, dolorem!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ad.</p>
-                
-                    <hr>
-                    <h4>Top Expertise</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, tempore! <a target="_blank" href="#">Download Resume</a></p>
-                    
-                    <div id="skills">
-                        <ul>
-                            <li>C#</li>
-                            <li>ASP.NET</li>
-                            <li>EFCore</li>
-                            <li>Javascript</li>
-                            <li>CSS</li>
-                        </ul>
-
-                        <ul>
-                            <li>RESTful API</li>
-                            <li>Angular</li>
-                            <li>EFCore</li>
-                            <li>Javascript</li>
-                            <li>CSS</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="social-links">
-                    <img id="social_img" class="reveal" src="./images/follow-me.jpg" alt="">
-                    <h3>Find me on Twitter and LinkedIn</h3>
-                    <div style="text-align: center;">
-                        <a target="_blank" href="https://twitter.com/S4MiiR" class="btn-socialMedia">
-                            <i class="fab fa-twitter"> Twitter</i>
-                        </a>
-                        <a target="_blank" href="https://www.linkedin.com/in/samir-boutazzout-397347102/" class="btn-socialMedia">
-                            <i class="fab fa-linkedin"> LinkedIn</i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="s1">
-        <div class="main-container">
-            <h3 style="text-align: center;">Some of My Past Projects</h3>
+            <h3 style="text-align: center;">Some of My Recent Projects</h3>
             <div class="post-wrapper">
                 <div class="post-wrapper__container">
                     <div class="post reveal post__one">
@@ -127,36 +80,32 @@
                     </div>
                 </div>
                 <div class="post-wrapper__container">
-                    <div class="post reveal post__two">
-                        <img class="thumbnail" src="./images/jack-finnigan-rriAI0nhcbc-unsplash.jpg" alt="">
-                        <div class="post-preview">
-                            <h6 class="post-title">Post Title</h6>
-                            <p class="post-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, impedit!</p>
-                            <a id="btn">Read More...</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-wrapper__container">
                     <div class="post reveal post__three">
-                        <img class="thumbnail" src="./images/jack-finnigan-rriAI0nhcbc-unsplash.jpg" alt="">
+                        <img class="thumbnail" src="./images/this.png" alt="">
                         <div class="post-preview">
-                            <h6 class="post-title">Post Title</h6>
-                            <p class="post-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h6 class="post-title">Portfolio</h6>
+                            <p class="post-intro">This personal portfolio was designed from the ground up by me. I opted for vanilla Javascript and pure CSS without the use of any preprocessor.</p>
+                        </div>
+                    </div>
+                </div>   
+                <div class="post-wrapper__container">
+                    <div class="post reveal post__two">
+                        <img class="thumbnail" src="./images/Ecommerce6.png" alt="">
+                        <div class="post-preview">
+                            <h6 class="post-title">E-Commerce Website</h6>
+                            <p class="post-intro">This is a scalable demo E-commerce web app built using <span>ASP.NET Core</span> on <span>.NET 5</span> and <span>Angular</span>. <span>Redis</span> was also used for caching and increased performance.</p>
                             <a id="btn">Read More...</a>
                         </div>
                     </div>
-                </div>
-
-                
+                </div>                
             </div>
-            <div id="myModal" class="modal">
 
+            <div id="myModal" class="modal">
                 <!-- Modal content -->
-                <div class="modal-content">
+                <div class="modal-content modal-content__one">
                     <header>
                         <h5>Title of Post</h5>
                         <div id="dot-1" class="browser-dot close"><span>&times;</span></div>
-                        <!-- <span class="close">&times;</span> -->
                     </header>
                     <div class="modal-content__body">
                         <div class="modal-content__body-gallery">
@@ -175,8 +124,78 @@
                         </div>
                     </div>
                 </div>
-              
-              </div>
+
+                <div class="modal-content modal-content__two">
+                    <header>
+                        <h5>E-commerce App</h5>
+                        <div id="dot-1" class="browser-dot close"><span>&times;</span></div>
+                    </header>
+                    <div class="modal-content__body">
+                        <div class="modal-content__body-gallery">
+                            <img class="thumbnail" src="/images/Ecommerce6.png" alt="">
+                            <img class="thumbnail" src="/images/Ecommerce5.png" alt="">
+                            <img class="thumbnail" src="/images/Ecommerce4.png" alt="">
+                        </div>
+                        <p>This is a scalable demo E-commerce web app built using <span>ASP.NET Core</span> for the back-end on <span>.NET 5</span> and <span>Angular</span> and <span>Bootstrap</span> for the front-end. <span>Redis</span> was also used for caching and increased performance. <br> The back-end side followed the clean architecture pattern by separating the high level modules from the low level modules and having them both rely on abstractions instead of each other. <br> The Core project represent the abstractions and live in their own assembly without the need to depend on other projects. On the other hand, the Infrastructure project lives in its own assembly but depends on the Core project to access its interfaces and data models. The API project avoids relying on Infrastructure directly and solely depends on the Core project. <br> Stripe was also implemented for Payment processing and is working well. To test the payment process, please refer to Stripe's tests cards and DO NOT USE A REAL PAYMENT CARD. The project was containerized into separate Docker images and interconnected through Docker compose.</p>
+                        <div class="modal-content__body-buttons">
+                            <a target="_blank" href="https://samdevlog.github.io/Anime-WebApp/" class="btn-socialMedia">
+                                <i class="fas fa-link"> Website</i>
+                            </a>
+                            <a target="_blank" href="https://github.com/SamDevLog/ASPNET-Ecommerce" class="btn-socialMedia">
+                                <i class="fab fa-github"> Repo</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section class="s1">
+        <div class="main-container">
+            <div class="about-wrapper">
+                <div class="about-me">
+                    <h4>More About Me</h4>
+                    <p>My name is Samir Boutazzout. I am from Morocco and I am a junior web developer. I work on both the backend and the frontend. My main back-end stack is ASP.NET Core, EF Core and Postgres. Additionally, I enjoy fiddling with CSS and vanilla Javascript without relying on frameworks despite having some experience using Angular.</p>
+                    <p>For CSS, I find myself more comfortable using a preprocessor such as Sass. I also like working with Javascript quite a bit as I have a decent knowledge of the language.</p>
+                
+                    <hr>
+                    <h4>Top Expertise</h4>
+                    <p>Following is a non-exhaustive list of the tech I can confidently call myself proficient in... <a target="_blank" href="#">Download Resume</a></p>
+                    
+                    <div id="skills">
+                        <ul>
+                            <li>C#</li>
+                            <li>ASP.NET Core</li>
+                            <li>.NET 5+</li>
+                            <li>Entity Framework Core</li>
+                            <li>Blazor</li>
+                        </ul>
+    
+                        <ul>
+                            <li>Javascript</li>
+                            <li>CSS & Sass</li>
+                            <li>Git & Github</li>
+                            <li>TypeScript</li>
+                            <li>Docker</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="social-links">
+                    <img id="social_img" class="reveal" src="./images/follow-me.jpg" alt="">
+                    <h3>Find me on Twitter and LinkedIn</h3>
+                    <div style="text-align: center;">
+                        <a target="_blank" href="https://twitter.com/S4MiiR" class="btn-socialMedia">
+                            <i class="fab fa-twitter"> Twitter</i>
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/samir-boutazzout-397347102/" class="btn-socialMedia">
+                            <i class="fab fa-linkedin"> LinkedIn</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
         
     </section>
