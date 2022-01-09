@@ -13,6 +13,8 @@
   --previewShadow: #f0ead6;
 
   --btnColor: black;
+
+  --blend-mode: color-burn;
 }
 
 html,
@@ -23,6 +25,10 @@ body {
   scrollbar-width: none;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar{
   display: none;
 }
@@ -30,7 +36,6 @@ body::-webkit-scrollbar{
 body * {
   transition: 0.3s;
 }
-
 
 h1,
 h2,
@@ -90,9 +95,22 @@ h6 {
 }
 
 .s2 {
+  
   background-color: var(--secondaryColor);
   border-bottom: 1px solid var(--borderColor);
+  position: relative;
   overflow: auto;
+
+}
+
+.menu{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 1;
+  visibility: hidden;
+  background-color: var(--mainColor);
+  z-index: 2;
 }
 
 .main-container {
@@ -131,12 +149,65 @@ h6 {
   justify-content: space-between;
   align-items: center;
   background-color: var(--mainColor);
+  
+  background-image: linear-gradient(var(--mainColor), var(--mainColor)),url(./images/morocco-tiles-background.jpg);
+  background-blend-mode: var(--blend-mode);
+  background-size: 50px;
+}
+
+.navbar{
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--mainColor);
+  
+  background-image: linear-gradient(var(--mainColor), var(--mainColor)),url(./images/morocco-tiles-background.jpg);
+  background-blend-mode: var(--blend-mode);
+  background-size: 50px;
 }
 
 #navigation {
   margin: 0;
   padding: 10px;
+
 }
+.nav__menu-items{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: unset;
+    padding: unset;
+    flex-grow: 1;
+}
+
+.nav__menu-items li{
+  width: 120px;
+  text-align: center;
+  transition: transform .4s ease;
+  position: relative;
+  background-color: var(--secondaryColor);
+  border-radius: 3px;
+}
+
+.nav__menu-items li:hover{
+  transform: scale(1.1);
+}
+.nav__menu-items li:hover h6 {
+  color: var(--secondaryText);
+}
+
+.nav__menu-items h6{
+  margin: unset;
+  padding: .7rem;
+}
+
 #navigation a {
   color: var(--mainText);
 }
@@ -146,6 +217,7 @@ h6 {
   margin-right: 5px;
   margin-left: 5px;
 }
+
 
 #navigation i:hover{
   color: var(--borderColor);
@@ -536,6 +608,11 @@ h6 {
   border-radius: 5px;
   background-color: var(--mainColor);
   margin-bottom: 50px;
+
+  
+  background-image: linear-gradient(var(--mainColor), var(--mainColor)),url(./images/morocco-tiles-background.jpg);
+  background-blend-mode: var(--blend-mode);
+  background-size: 50px;
 }
 
 #contact-form.active {
@@ -858,6 +935,13 @@ footer p{
       "right-column";
   }
 
+  .nav__menu-items li{
+    width: 90px;
+  }
+  .nav__menu-items h6{
+    font-size: 15px;
+  }
+
   .right-column {
     justify-content: center;
   }
@@ -891,7 +975,7 @@ footer p{
 
 
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:414px) {
   #preview-shadow{
     max-width: 270px;
     height: 175px;
@@ -903,6 +987,106 @@ footer p{
     width: 270px;
     padding: 10px;    
   }
+
+  .navbar{
+    display: none;
+  }
+
+  .nav__menu-items{
+    display: none;
+  }
+
+  header{
+    position: relative;
+  }
+  .menu-btn{
+    position: fixed;
+    z-index: 3;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+  }
+  .btn-line{
+    width: 20px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: var(--mainText);
+  }
+
+  .close{
+    transform: rotate(180deg);
+  }
+  .close .btn-line:nth-child(1){
+      transform: rotate(45deg) translate(5px, 5px);
+  }
+  .close .btn-line:nth-child(2){
+      opacity: 0;
+  }
+  .close .btn-line:nth-child(3){
+      transform: rotate(-45deg) translate(7px, -6px);
+  }
+  .menu.show{
+    visibility: visible;
+  }
+  .menu-nav{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    z-index: 2;
+    transition: all .5s ease-out; 
+  }
+  .menu-nav.show{
+    transform: translate3d(0, 0, 0);
+  }
+  .nav-item{
+    padding: .5rem 3rem;
+  }
+  .menu .nav-item{
+    transform: translate3d(600px, 0, 0);
+    transition: all .5s ease-out; 
+  }
+  .menu .nav-item.show{
+    transform: translate3d(0, 0, 0);
+  }
+  .menu .nav-item.current > a{
+    color: var(--mainColor);
+  }
+  .menu .nav-item.current{
+    background-color: var(--mainText);
+  }
+  .menu .nav-link{
+    display: inline-block;
+    position: relative;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: var(--secondaryText);
+    text-decoration: none;
+    transition: all .5s ease-out;
+  }
+  .menu .nav-link:hover{
+    color: var(--secondaryColor);
+  }
+  .nav-item:nth-child(1) {
+    transition-delay: 0.1s; }
+  
+  .nav-item:nth-child(2) {
+    transition-delay: 0.2s; }
+  
+  .nav-item:nth-child(3) {
+    transition-delay: 0.3s; }
+  
+  .nav-item:nth-child(4) {
+    transition-delay: 0.4s; }
 }
 
 @media screen and (max-width:320px){
@@ -913,6 +1097,7 @@ footer p{
   .intro-wrapper{
     grid-template-columns: minmax(300px, 1fr);
   }
+
 
   #preview-shadow{
     max-width: 300px;
@@ -947,6 +1132,14 @@ footer p{
     font-size: 40px;
   }
 }
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+ /* Sending email toast */
 
 #toast {
   visibility: hidden;

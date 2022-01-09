@@ -13,7 +13,32 @@
     
 </head>
 <body>
+    <header>
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu-nav">
+                <li data-link="home" class="nav-item current">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li data-link="projects" class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li data-link="aboutMe" class="nav-item">
+                    <a href="#aboutMe" class="nav-link">About Me</a>
+                </li>
+                <li data-link="contact" class="nav-item">
+                    <a href="#contact" class="nav-link">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <section id="home" class="s1">
+        
         <div class="main-container">
             <div class="greeting-wrapper">
                 <h1>Hi, I'm Samir Boutazzout</h1>
@@ -26,7 +51,24 @@
                         <div id="dot-2" class="browser-dot"></div>
                         <div id="dot-3" class="browser-dot"></div>
                     </div>
-                    <ul id="navigation">
+                    <ul class="nav__menu-items">
+                        <li>
+                            <a href="#home">
+                            <h6>Home</h6>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects">
+                            <h6>Projects</h6>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#aboutMe">
+                            <h6>About Me</h6>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="navigation">        
                         <li><a href="#contact"><i class="far fa-envelope fa-2x"></i></a></li>
                     </ul>
                 </div>
@@ -65,7 +107,7 @@
         </div>
     </section>
 
-    <section class="s2">
+    <section id="projects" class="s2">
         <div class="main-container">
             <h3 style="text-align: center;">Some of My Recent Projects</h3>
             <div class="post-wrapper">
@@ -152,7 +194,7 @@
         </div>
     </section>
     
-    <section class="s1">
+    <section id="aboutMe" class="s1">
         <div class="main-container">
             <div class="about-wrapper">
                 <div class="about-me">
@@ -184,7 +226,7 @@
                 </div>
     
                 <div class="social-links">
-                    <img id="social_img" class="reveal" src="./images/follow-me.jpg" alt="">
+                    <img id="social_img" class="reveal" src="./images/social_img.jpg" alt="social media links">
                     <h3>Find me on Twitter and LinkedIn</h3>
                     <div style="text-align: center;">
                         <a target="_blank" href="https://twitter.com/S4MiiR" class="btn-socialMedia">
@@ -231,7 +273,7 @@
         <a class="scrollUpBtn" href="#home"><i class="fas fa-rocket fa-3x"></i></a>
     </section>
 
-    <footer class="s1"><p>Copyrights &COPY; 2021</p></footer>
+    <footer class="s1"><p>Copyrights &COPY; 2022</p></footer>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 

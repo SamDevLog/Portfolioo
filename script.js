@@ -36,12 +36,12 @@ function setTheme(mode){
 
 
 function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
+    const reveals = document.querySelectorAll(".reveal");
   
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 150;
   
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
@@ -55,11 +55,11 @@ window.addEventListener("scroll", reveal);
 
 let target = document.querySelector('footer');
 
-var scrollToTopBtn = document.querySelector(".scrollUpBtn");
-var rootElement = document.documentElement;
+const scrollToTopBtn = document.querySelector(".scrollUpBtn");
+const rootElement = document.documentElement;
 
 
-function callback(entries, observer) {
+function showScrollUpBtn(entries, observer) {
     // The callback will return an array of entries, even if you are only observing a single item
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -81,7 +81,7 @@ function scrollToTop() {
 
 scrollToTopBtn.addEventListener("click", scrollToTop);
 
-let observer = new IntersectionObserver(callback);
+const observer = new IntersectionObserver(showScrollUpBtn);
 
 observer.observe(target);
 
@@ -163,8 +163,88 @@ function resetFields(){
 
 
 function launch_toast() {
-  var x = document.getElementById("toast")
+  const x = document.getElementById("toast")
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
 }
 
+// Get active anchor link in menu based on section in view
+
+const sections = document.querySelectorAll('section');
+let sectionsObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    
+    if (entry.isIntersecting) {
+      document.querySelector(`[data-link="${entry.target.id}"]`).classList.add('current')
+    }else{
+      document.querySelector(`[data-link="${entry.target.id}"]`).classList.remove('current')
+
+    }
+  })
+}, {threshold: .3});
+
+sections.forEach(sec => 
+  sectionsObserver.observe(sec))
+
+
+const menuBtn = document.querySelector('.menu-btn');
+const menu = document.querySelector('.menu');
+const menuNav = document.querySelector('.menu-nav');
+const navItems = document.querySelectorAll('.nav-item');
+
+//set initial state of menu
+let showMenu = false;
+
+menuBtn.addEventListener('click', toggleMenu);
+
+for (const navItem of navItems) {
+  navItem.addEventListener('click', ()=>{
+    toggleMenu();
+    
+  })
+}
+
+function toggleMenu(){
+    if(!showMenu){
+        menuBtn.classList.add('close');
+        menu.classList.add('show');
+        menuNav.classList.add('show');
+        body.classList.toggle('noscroll');
+
+        navItems.forEach(item => item.classList.add('show'));
+
+        showMenu = true;
+    }else{
+        menuBtn.classList.remove('close');
+        menu.classList.remove('show');
+        menuNav.classList.remove('show');
+        body.classList.toggle('noscroll');
+
+        navItems.forEach(item => item.classList.remove('show'));
+
+        showMenu = false;
+    }
+}
+
+const navbarTarget = document.querySelector('.greeting-wrapper')
+const navwrapper = document.querySelector('.nav-wrapper')
+
+const navbarObserver = new IntersectionObserver((entries)=>{
+  
+  if (!entries[0].isIntersecting && !navwrapper.classList.contains('navbar')) {
+    navwrapper.classList.replace('nav-wrapper','navbar')
+  }else{
+    // navwrapper.classList.remove('navbar')
+    navwrapper.classList.replace('navbar', 'nav-wrapper')
+
+  }
+
+  // if (!entries[0].isIntersecting && !navwrapper.classList.contains('navbar')) {
+  //   navwrapper.classList.add('navbar')
+// }
+  
+  // navbarTarget.classList.toggle('navbar', entry.isIntersecting);
+  // navbarTarget.classList.toggle('nav-wrapper', entry.isIntersecting);
+}, {rootMargin: '0px 0px 100px 0px' ,threshold: .1})
+
+navbarObserver.observe(navbarTarget)
