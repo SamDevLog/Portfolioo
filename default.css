@@ -150,7 +150,7 @@ h6 {
   align-items: center;
   background-color: var(--mainColor);
   
-  background-image: linear-gradient(var(--mainColor), var(--mainColor)),url(./images/morocco-tiles-background.jpg);
+  background-image: linear-gradient(var(--mainColor), var(--mainColor)),url(./images/tile.jpg);
   background-blend-mode: var(--blend-mode);
   background-size: 50px;
 }
@@ -167,7 +167,7 @@ h6 {
   align-items: center;
   background-color: var(--mainColor);
   
-  background-image: linear-gradient(var(--mainColor), var(--mainColor)),url(./images/morocco-tiles-background.jpg);
+  background-image: linear-gradient(var(--mainColor), var(--mainColor)),url(./images/tile.jpg);
   background-blend-mode: var(--blend-mode);
   background-size: 50px;
 }
@@ -610,7 +610,7 @@ h6 {
   margin-bottom: 50px;
 
   
-  background-image: linear-gradient(var(--mainColor), var(--mainColor)),url(./images/morocco-tiles-background.jpg);
+  background-image: linear-gradient(var(--mainColor), var(--mainColor)),url(./images/tile.jpg);
   background-blend-mode: var(--blend-mode);
   background-size: 50px;
 }
