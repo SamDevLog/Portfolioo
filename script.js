@@ -53,13 +53,13 @@ function reveal() {
   
 window.addEventListener("scroll", reveal);
 
-let target = document.querySelector('footer');
+let target = document.querySelector('#contact-form');
 
 const scrollToTopBtn = document.querySelector(".scrollUpBtn");
 const rootElement = document.documentElement;
 
 
-function showScrollUpBtn(entries, observer) {
+function showScrollUpBtn(entries) {
     // The callback will return an array of entries, even if you are only observing a single item
     entries.forEach(entry => {
       if (entry.isIntersecting) {
