@@ -113,11 +113,17 @@
             <div class="post-wrapper">
                 <div class="post-wrapper__container">
                     <div class="post reveal post__one">
-                        <img class="thumbnail" src="./images/AnimeCavernSnapshot-min.png" alt="Anime Cavern Blazor WASM">
+                        <img class="thumbnail" src="./images/AnimeCavern/AnimeCavernSnapshot-min.png" alt="Anime Cavern Blazor WASM">
                         <div class="post-preview">
                             <h6 class="post-title">Anime Cavern</h6>
-                            <p class="post-intro">Anime Cavern is a website developed entirely in <span>ASP.NET Blazor Webassembly</span> and pure <span>CSS</span>. Making use of the public <span>APIs</span> Jikan and AniList.</p>
-                            <a id="btn">Read More...</a>
+                            <p class="post-intro">Anime Cavern is a website developed entirely in <span>ASP.NET Blazor Webassembly</span> and pure <span>CSS</span>. Making use of the public <span>APIs</span> Jikan and AniList. <a id="btn">Read More...</a></p>
+                            
+                            <div class="tags">
+                                <div class="tag">ASP.NET</div>
+                                <div class="tag">Blazor WASM</div>
+                                <div class="tag">Javascript</div>
+                                <div class="tag">CSS</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -127,16 +133,32 @@
                         <div class="post-preview">
                             <h6 class="post-title">Portfolio</h6>
                             <p class="post-intro">This personal portfolio was designed from the ground up by me. I opted for vanilla Javascript and pure CSS without the use of any preprocessor.</p>
+                            <div class="tags">
+                                <div class="tag">Vanilla</div>
+                                <div class="tag">Javascript</div>
+                                <div class="tag">CSS</div>
+                                <div class="tag">HTML5</div>
+                            </div>
+                        
                         </div>
                     </div>
                 </div>   
                 <div class="post-wrapper__container">
                     <div class="post reveal post__three">
-                        <img class="thumbnail" src="./images/Ecommerce6-min.png" alt="">
+                        <img class="thumbnail" src="./images/Ecomm/Ecommerce6-min.png" alt="">
                         <div class="post-preview">
                             <h6 class="post-title">E-Commerce Website</h6>
-                            <p class="post-intro">This is a scalable demo E-commerce web app built using <span>ASP.NET Core</span> on <span>.NET 5</span> and <span>Angular</span>. <span>Redis</span> was also used for caching and increased performance.</p>
-                            <a id="btn">Read More...</a>
+                            <p class="post-intro">This is a scalable demo E-commerce web app built using <span>ASP.NET Core</span> on <span>.NET 5</span> and <span>Angular</span>. <span>Redis</span> was also used for caching and increased performance. <a id="btn">Read More...</a></p>
+                            
+                            <div class="tags">
+                                <div class="tag">ASP.NET</div>
+                                <div class="tag">EF Core</div>                        
+                                <div class="tag">PostGres</div>                        
+                                <div class="tag">Redis</div>
+                                <div class="tag">Docker</div>
+                                <div class="tag">Stripe</div>
+                                <div class="tag">Angular</div>
+                            </div>
                         </div>
                     </div>
                 </div>                
@@ -154,19 +176,24 @@
                             <button data-carousel-button="prec" class="carousel-button prev">&#8656</button>
                             <button data-carousel-button="next" class="carousel-button next">&#8658</button>
                             <ul data-slides>
-                                <li data-active class="slide"><img class="thumbnail" src="./images/AnimeCavernSnapshot-min.png" alt=""></li>
-                                <li class="slide"><img class="thumbnail" src="./images/AnimeCavernSnapshot-min.png" alt=""></li>
-                                <li class="slide"><img class="thumbnail" src="./images/AnimeCavernSnapshot-min.png" alt=""></li>
+                                <li data-active class="slide"><img class="thumbnail" src="./images/AnimeCavern/AnimeCavernSnapshot-min.png" alt=""></li>
+                                <li data-active class="slide"><img class="thumbnail" src="./images/AnimeCavern/AnimeCavernSnapshot1.png" alt=""></li>
+                                <li data-active class="slide"><img class="thumbnail" src="./images/AnimeCavern/AnimeCavernSnapshot2.png" alt=""></li>
+                                <li data-active class="slide"><img class="thumbnail" src="./images/AnimeCavern/AnimeCavernSnapshot3.png" alt=""></li>
+                                <li data-active class="slide"><img class="thumbnail" src="./images/AnimeCavern/AnimeCavernSnapshot4.png" alt=""></li>
+                                <li data-active class="slide"><img class="thumbnail" src="./images/AnimeCavern/AnimeCavernSnapshot5.png" alt=""></li>
                             </ul>
                         </div>
-                        <p>Anime Cavern is a website developed entirely in the newly released client side framework for .NET, <span>ASP.NET Core</span> <span>Blazor Webassembly</span> and pure CSS. Making use of the public anime APIs Jikan and AniList, the app uses the new <span>IHttpClientFactory</span> to create the <span>HttpClient</span> instances needed to make the calls to the APIs. The requests are abstracted behind two interfaces, one for each <span>API</span>. To deserialize the JSON content received, the new System.Text.Json takes care of the errand brilliantly.</p>
-                        <div class="modal-content__body-buttons">
-                            <a target="_blank" href="https://samdevlog.github.io/Anime-WebApp/" class="btn-socialMedia">
-                                <i class="fas fa-link"> Website</i>
-                            </a>
-                            <a target="_blank" href="https://github.com/SamDevLog/Anime-WebApp/" class="btn-socialMedia">
-                                <i class="fab fa-github"> Repo</i>
-                            </a>
+                        <div class="modal-content__left">
+                            <p>Anime Cavern is a website developed entirely in the newly released client side framework for .NET, <span>ASP.NET Core</span> <span>Blazor Webassembly</span> and pure CSS. Making use of the public anime APIs Jikan and AniList, the app uses the new <span>IHttpClientFactory</span> to create the <span>HttpClient</span> instances needed to make the calls to the APIs. The requests are abstracted behind two interfaces, one for each <span>API</span>. To deserialize the JSON content received, the new System.Text.Json takes care of the errand brilliantly.</p>
+                            <div class="modal-content__body-buttons">
+                                <a target="_blank" href="https://samdevlog.github.io/Anime-WebApp/" class="btn-socialMedia">
+                                    <i class="fas fa-link"> Live</i>
+                                </a>
+                                <a target="_blank" href="https://github.com/SamDevLog/Anime-WebApp/" class="btn-socialMedia">
+                                    <i class="fab fa-github"> Repo</i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -182,21 +209,26 @@
                                 <button data-carousel-button="prec" class="carousel-button prev">&#8656</button>
                                 <button data-carousel-button="next" class="carousel-button next">&#8658</button>
                                 <ul data-slides>
-                                    <li data-active class="slide"><img class="thumbnail" src="./images/Ecommerce6-min.png" alt=""></li>
-                                    <li class="slide"><img class="thumbnail" src="./images/Ecommerce5-min.png" alt=""></li>
-                                    <li class="slide"><img class="thumbnail" src="./images/Ecommerce4-min.png" alt=""></li>
+                                    <li data-active class="slide"><img class="thumbnail" src="./images/Ecomm/Ecommerce6-min.png" alt=""></li>
+                                    <li data-active class="slide"><img class="thumbnail" src="./images/Ecomm/Ecommerce5-min.png" alt=""></li>
+                                    <li data-active class="slide"><img class="thumbnail" src="./images/Ecomm/Ecommerce4-min.png" alt=""></li>
+                                    <li data-active class="slide"><img class="thumbnail" src="./images/Ecomm/Ecommerce3-min.png" alt=""></li>
                                 </ul>
                             </div>
+
+                            <div class="modal-content__left">
+                                <p>This is a scalable demo E-commerce web app built using <span>ASP.NET Core</span> for the back-end on <span>.NET 5</span> and <span>Angular</span> and <span>Bootstrap</span> for the front-end. <span>Redis</span> was also used for caching and increased performance. <br> The back-end side followed the clean architecture pattern by separating the high level modules from the low level modules and having them both rely on abstractions instead of each other. <br> The Core project represent the abstractions and live in their own assembly without the need to depend on other projects. On the other hand, the Infrastructure project lives in its own assembly but depends on the Core project to access its interfaces and data models. The API project avoids relying on Infrastructure directly and solely depends on the Core project. <br> Stripe was also implemented for Payment processing and is working well. To test the payment process, please refer to Stripe's tests cards and DO NOT USE A REAL PAYMENT CARD. The project was containerized into separate Docker images and interconnected through Docker compose.</p>
+                                <div class="modal-content__body-buttons">
+                                    <a target="_blank" href="#" class="btn-socialMedia" disabled >
+                                        <i class="fas fa-link"> Live</i>
+                                    </a>
+                                    <a target="_blank" href="https://github.com/SamDevLog/ASPNET-Ecommerce" class="btn-socialMedia">
+                                        <i class="fab fa-github"> Repo</i>
+                                    </a>
+                                </div>
+                            </div>
                         
-                        <p>This is a scalable demo E-commerce web app built using <span>ASP.NET Core</span> for the back-end on <span>.NET 5</span> and <span>Angular</span> and <span>Bootstrap</span> for the front-end. <span>Redis</span> was also used for caching and increased performance. <br> The back-end side followed the clean architecture pattern by separating the high level modules from the low level modules and having them both rely on abstractions instead of each other. <br> The Core project represent the abstractions and live in their own assembly without the need to depend on other projects. On the other hand, the Infrastructure project lives in its own assembly but depends on the Core project to access its interfaces and data models. The API project avoids relying on Infrastructure directly and solely depends on the Core project. <br> Stripe was also implemented for Payment processing and is working well. To test the payment process, please refer to Stripe's tests cards and DO NOT USE A REAL PAYMENT CARD. The project was containerized into separate Docker images and interconnected through Docker compose.</p>
-                        <div class="modal-content__body-buttons">
-                            <a target="_blank" href="#" class="btn-socialMedia" disabled >
-                                <i class="fas fa-link"> Website</i>
-                            </a>
-                            <a target="_blank" href="https://github.com/SamDevLog/ASPNET-Ecommerce" class="btn-socialMedia">
-                                <i class="fab fa-github"> Repo</i>
-                            </a>
-                        </div>
+                        
                     </div>
                 </div>
                 
@@ -236,33 +268,8 @@
                 </div>
     
                 <div class="social-links">
-                    <img id="social_img" class="reveal" src="./images/social_img-min.jpg" alt="social media links">
-                    <!-- <div class="social-links__icons">
-                        <div class="orbit-path">
-                            <svg xmlns="http://www.w3.org/2000/svg" 
-                            width="64px" 
-                            height="64px" viewBox="0 0 64 64" id="github">
-                                <path d="M31,2C15.01,2,2,15.01,2,31c0,12.648,8.143,23.424,19.459,27.38c0.16,0.113,0.349,0.182,0.551,0.187C24.842,59.493,27.862,60,31,60c15.99,0,29-13.01,29-29S46.99,2,31,2z M31,58c-2.53,0-4.977-0.357-7.302-1.011c0.29-0.85,0.298-1.724,0.298-1.741l0.003-0.536c0.005-0.451,0.011-1.063,0.001-2.718c-0.002-0.302-0.14-0.586-0.375-0.774c-0.234-0.188-0.541-0.259-0.837-0.197c-6.716,1.465-8.171-3.382-8.227-3.583c-0.01-0.036-0.021-0.071-0.035-0.105c-0.959-2.438-2.225-3.677-2.98-4.239c1.63,0.574,2.541,2.162,2.561,2.196c2.645,4.529,7.013,4.646,9.302,3.622c0.314-0.141,0.534-0.433,0.582-0.773c0.202-1.43,1.77-3.321,2.564-4.018c0.298-0.261,0.413-0.672,0.295-1.05s-0.447-0.651-0.841-0.695c-5.867-0.668-11.865-2.716-11.865-12.844c0-2.639,0.881-4.938,2.618-6.836c0.262-0.285,0.335-0.695,0.188-1.054c-0.266-0.65-1.003-2.929,0.068-6.094c0.85,0.027,2.922,0.392,6.416,2.761c0.244,0.165,0.548,0.215,0.829,0.136c2.091-0.582,4.424-0.895,6.737-0.905c2.319,0.011,4.652,0.323,6.747,0.905c0.283,0.079,0.586,0.029,0.828-0.136c3.513-2.379,5.586-2.736,6.411-2.766c1.072,3.164,0.338,5.449,0.073,6.101c-0.145,0.357-0.071,0.767,0.189,1.051c1.734,1.896,2.614,4.196,2.614,6.837c0,10.135-6.012,12.168-11.894,12.819c-0.396,0.044-0.727,0.318-0.845,0.698s0.001,0.793,0.302,1.053C36.214,44.782,38,47.713,38,50l-0.002,5.255c0,0.016,0.007,0.889,0.291,1.737C35.969,57.644,33.526,58,31,58z M40.198,56.385c-0.108-0.322-0.2-0.804-0.2-1.13L40,50c0-2.092-1.023-4.375-2.03-5.905c5.55-0.939,11.895-3.819,11.895-14.562c0-2.948-0.922-5.546-2.741-7.731c0.401-1.315,0.892-4.084-0.484-7.56c-0.11-0.278-0.34-0.493-0.625-0.584c-0.28-0.089-2.847-0.757-8.177,2.741c-2.166-0.56-4.46-0.848-6.836-0.858c-2.37,0.011-4.664,0.299-6.826,0.858c-5.329-3.5-7.9-2.831-8.181-2.741c-0.285,0.091-0.515,0.306-0.625,0.584c-1.377,3.479-0.885,6.246-0.481,7.561c-1.821,2.187-2.744,4.784-2.744,7.73c0,10.647,6.229,13.58,11.733,14.557c-0.693,0.876-1.418,2.009-1.737,3.158c-1.42,0.396-4.336,0.409-6.294-2.943c-0.071-0.129-1.781-3.167-5.153-3.403c-0.538,0.003-1.896,0.09-2.224,1.13c-0.365,1.154,0.911,2.026,1.456,2.398c0.036,0.024,0.087,0.054,0.126,0.073c0.062,0.031,1.518,0.796,2.603,3.534c0.23,0.712,2.217,6.099,9.352,5.153c0.002,0.789-0.002,1.186-0.006,1.502l-0.003,0.556c0,0.328-0.095,0.812-0.207,1.132C11.423,52.606,4,42.654,4,31C4,16.112,16.112,4,31,4s27,12.112,27,27C58,42.659,50.57,52.615,40.198,56.385z"/>
-                                <path d="M31 37c-.553 0-1 .447-1 1v2c0 .553.447 1 1 1s1-.447 1-1v-2C32 37.447 31.553 37 31 37zM35.599 39.526c.119.447.523.741.965.741.086 0 .173-.011.26-.034.533-.143.85-.691.707-1.225l-.518-1.932c-.143-.534-.691-.849-1.225-.707-.533.143-.85.691-.707 1.225L35.599 39.526zM21.75 34.521c-.478-.276-1.091-.113-1.366.366l-1 1.731c-.276.479-.112 1.09.366 1.366.157.091.329.134.499.134.346 0 .682-.179.867-.5l1-1.731C22.393 35.409 22.229 34.798 21.75 34.521zM40.884 37.619c.186.321.521.5.867.5.17 0 .342-.043.499-.134.479-.276.643-.888.366-1.366l-1-1.731c-.277-.479-.89-.643-1.366-.366-.479.276-.643.888-.366 1.366L40.884 37.619zM26.212 36.37c-.532-.142-1.082.173-1.225.707l-.518 1.932c-.143.533.174 1.082.707 1.225.087.023.174.034.26.034.441 0 .846-.294.965-.741l.518-1.932C27.062 37.062 26.745 36.513 26.212 36.37zM41.351 9.456c-.748-.378-1.522-.717-2.301-1.007-.517-.192-1.094.069-1.286.587-.193.518.069 1.094.587 1.286.71.266 1.416.574 2.1.919.145.073.298.107.449.107.365 0 .718-.201.894-.55C42.042 10.307 41.844 9.705 41.351 9.456zM34.654 7.291c-5.171-.829-10.519.137-15.047 2.723-.48.273-.647.884-.373 1.363.185.324.521.505.869.505.168 0 .338-.042.494-.132 4.135-2.358 9.018-3.24 13.74-2.484.546.088 1.058-.283 1.146-.829S35.199 7.378 34.654 7.291z"/>
-                            </svg>
-                            
-                            <svg xmlns="http://www.w3.org/2000/svg"  
-                            viewBox="0 0 64 64" 
-                            width="64px" 
-                            height="64px" id="linkedin">
-                                <path d="M23 28h-7c-.553 0-1 .448-1 1v22c0 .552.447 1 1 1h7c.553 0 1-.448 1-1V29C24 28.448 23.553 28 23 28zM22 50h-5V30h5V50zM39.875 27.438c-2.317 0-4.147.816-5.441 1.876v-.341c0-.552-.447-1-1-1h-6.433c-.553 0-1 .448-1 1V51c0 .552.447 1 1 1h6.702c.553 0 1-.448 1-1V39.886c0-3.313.82-4.545 3.025-4.545 2.127 0 2.486 1.458 2.486 4.725V51c0 .552.447 1 1 1h6.71c.553 0 1-.448 1-1V38.724C48.925 33.143 47.85 27.438 39.875 27.438zM46.925 50h-4.71v-9.935c0-2.35 0-6.725-4.486-6.725-5.025 0-5.025 4.926-5.025 6.545V50h-4.702V29.973h4.433v1.952c0 .552.539 1 1.092 1 .371 0 .712-.206.885-.534.718-1.363 2.58-2.954 5.465-2.954 5.87 0 7.05 3.553 7.05 9.286V50zM19.5 18c-2.481 0-4.5 2.019-4.5 4.5s2.019 4.5 4.5 4.5 4.5-2.019 4.5-4.5S21.981 18 19.5 18zM19.5 25.328c-1.56 0-2.828-1.269-2.828-2.828s1.268-2.828 2.828-2.828 2.828 1.269 2.828 2.828S21.06 25.328 19.5 25.328z"/><path d="M51,6H13c-3.859,0-7,3.14-7,7v38c0,3.86,3.141,7,7,7h38c3.859,0,7-3.14,7-7V13C58,9.14,54.859,6,51,6z M56,51c0,2.757-2.243,5-5,5H13c-2.757,0-5-2.243-5-5V13c0-2.757,2.243-5,5-5h38c2.757,0,5,2.243,5,5V51z"/>
-                                <path d="M17 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C16 15.552 16.447 16 17 16zM12 12c-.553 0-1 .448-1 1v2c0 .552.447 1 1 1s1-.448 1-1v-2C13 12.448 12.553 12 12 12zM32 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C31 15.552 31.447 16 32 16zM37 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C36 15.552 36.447 16 37 16zM42 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C41 15.552 41.447 16 42 16zM47 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C46 15.552 46.447 16 47 16zM52 12c-.553 0-1 .448-1 1v2c0 .552.447 1 1 1s1-.448 1-1v-2C53 12.448 52.553 12 52 12zM22 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C21 15.552 21.447 16 22 16zM27 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C26 15.552 26.447 16 27 16z"/>
-                            </svg>
-                            
-                            <svg xmlns="http://www.w3.org/2000/svg"  
-                            viewBox="0 0 64 64" 
-                            width="64px" 
-                            height="64px" id="twitter">
-                                <path d="M51,6H13c-3.86,0-7,3.141-7,7v38c0,3.859,3.14,7,7,7h38c3.86,0,7-3.141,7-7V13C58,9.141,54.86,6,51,6z M56,51c0,2.757-2.243,5-5,5H13c-2.757,0-5-2.243-5-5V13c0-2.757,2.243-5,5-5h38c2.757,0,5,2.243,5,5V51z"/>
-                                <path d="M17 16c.552 0 1-.447 1-1v-2c0-.553-.448-1-1-1s-1 .447-1 1v2C16 15.553 16.448 16 17 16zM12 12c-.552 0-1 .447-1 1v2c0 .553.448 1 1 1s1-.447 1-1v-2C13 12.447 12.552 12 12 12zM32 16c.552 0 1-.447 1-1v-2c0-.553-.448-1-1-1s-1 .447-1 1v2C31 15.553 31.448 16 32 16zM37 16c.552 0 1-.447 1-1v-2c0-.553-.448-1-1-1s-1 .447-1 1v2C36 15.553 36.448 16 37 16zM42 16c.552 0 1-.447 1-1v-2c0-.553-.448-1-1-1s-1 .447-1 1v2C41 15.553 41.448 16 42 16zM47 16c.552 0 1-.447 1-1v-2c0-.553-.448-1-1-1s-1 .447-1 1v2C46 15.553 46.448 16 47 16zM52 12c-.552 0-1 .447-1 1v2c0 .553.448 1 1 1s1-.447 1-1v-2C53 12.447 52.552 12 52 12zM22 16c.552 0 1-.447 1-1v-2c0-.553-.448-1-1-1s-1 .447-1 1v2C21 15.553 21.448 16 22 16zM27 16c.552 0 1-.447 1-1v-2c0-.553-.448-1-1-1s-1 .447-1 1v2C26 15.553 26.448 16 27 16zM49.489 24.12c-.226.1-.455.194-.686.281.401-.601.72-1.258.944-1.955.111-.347-.004-.727-.289-.954-.285-.227-.68-.254-.994-.068-1.146.68-2.379 1.176-3.672 1.479-1.44-1.346-3.358-2.109-5.339-2.109-4.306 0-7.809 3.503-7.809 7.807 0 .207.008.413.024.619-4.898-.532-9.433-2.984-12.571-6.834-.181-.224-.46-.344-.748-.321-.287.022-.545.184-.689.433-.692 1.188-1.058 2.545-1.058 3.926 0 1.468.409 2.877 1.153 4.089-.25-.103-.534-.085-.771.053-.267.154-.434.438-.438.746 0 .004 0 .096 0 .1 0 2.438 1.14 4.665 2.952 6.111-.114.051-.217.125-.302.221-.205.232-.273.555-.178.849.776 2.423 2.659 4.264 4.988 5.032-1.913 1.052-4.052 1.601-6.286 1.601-.532 0-1.053-.03-1.549-.09-.409-.051-.793.19-.93.575-.138.385.008.814.352 1.035C18.909 48.875 22.746 50 26.688 50c7.746 0 12.594-3.655 15.297-6.722 3.367-3.821 5.298-8.877 5.298-13.874 0-.156-.002-.312-.006-.467 1.281-.984 2.389-2.169 3.297-3.528.217-.324.194-.753-.058-1.052C50.265 24.058 49.846 23.962 49.489 24.12zM45.872 27.796c-.24.172-.377.455-.364.751.013.284.021.569.021.857 0 11.793-9.579 18.841-18.841 18.841-2.442 0-4.84-.472-7.076-1.381 2.645-.333 5.123-1.365 7.254-3.034.292-.229.409-.617.291-.969s-.445-.592-.816-.599c-2.118-.039-4.023-1.174-5.08-2.935.659-.009 1.314-.1 1.949-.272.393-.106.661-.469.647-.876-.014-.407-.305-.751-.704-.831-2.361-.475-4.179-2.311-4.702-4.632.674.211 1.376.331 2.082.353.394.03.744-.236.863-.608.12-.373-.022-.78-.348-.997-1.687-1.128-2.693-3.011-2.693-5.039 0-.641.102-1.276.298-1.879 3.637 3.89 8.666 6.245 14.004 6.513.285.016.541-.103.717-.313.177-.212.244-.494.182-.762-.105-.448-.157-.913-.157-1.381 0-3.337 2.716-6.053 6.054-6.053 1.667 0 3.278.697 4.418 1.912.208.22.513.318.81.26.716-.141 1.418-.334 2.101-.578-.395.433-.855.809-1.367 1.116-.355.213-.513.644-.38 1.036.134.392.523.638.934.588.422-.051.84-.118 1.254-.204C46.799 27.081 46.348 27.453 45.872 27.796z"/>
-                            </svg>
-                        </div>
-                    </div> -->
+                    <img id="social_img" class="reveal" src="./images/social-media-min.png" alt="social media links">
+                    
                     <h3>Find me on Twitter and LinkedIn</h3>
                     <div class="social-links__buttons">
                         <a target="_blank" href="https://twitter.com/S4MiiR" class="btn-socialMedia">
