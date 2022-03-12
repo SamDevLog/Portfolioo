@@ -145,7 +145,7 @@
                 </div>   
                 <div class="post-wrapper__container">
                     <div class="post reveal post__three">
-                        <img class="thumbnail" src="./images/Ecomm/Ecommerce6-min.png" alt="">
+                        <img class="thumbnail" src="./images/Ecomm/sdl-store1.webp" alt="web store demo picture">
                         <div class="post-preview">
                             <h6 class="post-title">E-Commerce Website</h6>
                             <p class="post-intro">This is a scalable demo E-commerce web app built using <span>ASP.NET Core</span> on <span>.NET 5</span> and <span>Angular</span>. <span>Redis</span> was also used for caching and increased performance. <a id="btn">Read More...</a></p>
@@ -154,10 +154,11 @@
                                 <div class="tag">ASP.NET</div>
                                 <div class="tag">EF Core</div>                        
                                 <div class="tag">PostGres</div>                        
-                                <div class="tag">Redis</div>
                                 <div class="tag">Docker</div>
+                                <div class="tag">React</div>
+                                <div class="tag">TyepScript</div>
+                                <div class="tag">Redux TK</div>
                                 <div class="tag">Stripe</div>
-                                <div class="tag">Angular</div>
                             </div>
                         </div>
                     </div>
@@ -209,20 +210,22 @@
                                 <button data-carousel-button="prec" class="carousel-button prev">&#8656</button>
                                 <button data-carousel-button="next" class="carousel-button next">&#8658</button>
                                 <ul data-slides>
-                                    <li data-active class="slide"><img class="thumbnail" src="./images/Ecomm/Ecommerce6-min.png" alt=""></li>
-                                    <li data-active class="slide"><img class="thumbnail" src="./images/Ecomm/Ecommerce5-min.png" alt=""></li>
-                                    <li data-active class="slide"><img class="thumbnail" src="./images/Ecomm/Ecommerce4-min.png" alt=""></li>
-                                    <li data-active class="slide"><img class="thumbnail" src="./images/Ecomm/Ecommerce3-min.png" alt=""></li>
+                                    <li data-active class="slide"><img class="thumbnail" src="./images/Ecomm/sdl-store1.webp" alt="ecommerce web app demo picture"></li>
+                                    <li data-active class="slide"><img class="thumbnail" src="./images/Ecomm/sdl-store2.webp" alt="ecommerce web app demo picture"></li>
+                                    <li data-active class="slide"><img class="thumbnail" src="./images/Ecomm/sdl-store3.webp" alt="ecommerce web app demo picture"></li>
+                                    <li data-active class="slide"><img class="thumbnail" src="./images/Ecomm/sdl-store4.webp" alt="ecommerce web app demo picture"></li>
+                                    <li data-active class="slide"><img class="thumbnail" src="./images/Ecomm/sdl-store5.webp" alt="ecommerce web app demo picture"></li>
+                                    <li data-active class="slide"><img class="thumbnail" src="./images/Ecomm/sdl-store6.webp" alt="ecommerce web app demo picture"></li>
                                 </ul>
                             </div>
 
                             <div class="modal-content__left">
-                                <p>This is a scalable demo E-commerce web app built using <span>ASP.NET Core</span> for the back-end on <span>.NET 5</span> and <span>Angular</span> and <span>Bootstrap</span> for the front-end. <span>Redis</span> was also used for caching and increased performance. <br> The back-end side followed the clean architecture pattern by separating the high level modules from the low level modules and having them both rely on abstractions instead of each other. <br> The Core project represent the abstractions and live in their own assembly without the need to depend on other projects. On the other hand, the Infrastructure project lives in its own assembly but depends on the Core project to access its interfaces and data models. The API project avoids relying on Infrastructure directly and solely depends on the Core project. <br> Stripe was also implemented for Payment processing and is working well. To test the payment process, please refer to Stripe's tests cards and DO NOT USE A REAL PAYMENT CARD. The project was containerized into separate Docker images and interconnected through Docker compose.</p>
+                                <p>This is a scalable demo E-commerce web app built using <span>ASP.NET Core</span> for the back-end on <span>.NET 6</span>, <span>React JS</span> and <span>Material UI</span> for the front-end with TypeScript.<span>Postgres Db</span> was used as database and Entity Framework Core 6 as an ORM. <br> For the data access layer, I extended the IQueryable type for the entities to filter and query the database, instead of a repository pattern. <br/> I implemented Stripe to process payments.</p>
                                 <div class="modal-content__body-buttons">
-                                    <a target="_blank" href="#" class="btn-socialMedia" disabled >
+                                    <a target="_blank" href="https://sdl-store.herokuapp.com/" class="btn-socialMedia">
                                         <i class="fas fa-link"> Live</i>
                                     </a>
-                                    <a target="_blank" href="https://github.com/SamDevLog/ASPNET-Ecommerce" class="btn-socialMedia">
+                                    <a target="_blank" href="https://github.com/SamDevLog/CoutureShop" class="btn-socialMedia">
                                         <i class="fab fa-github"> Repo</i>
                                     </a>
                                 </div>
@@ -241,7 +244,7 @@
             <div class="about-wrapper">
                 <div class="about-me">
                     <h4>More About Me</h4>
-                    <p>My name is Samir Boutazzout. I am from Morocco and I am a junior web developer. I work on both the backend and the frontend. My main back-end stack is ASP.NET Core, EF Core and Postgres. Additionally, I enjoy fiddling with CSS and vanilla Javascript without relying on frameworks despite having some experience using Angular.</p>
+                    <p>My name is Samir Boutazzout. I am a web developer from Morocco with over two years experience in the .NET ecosystem and around a year on Javascript. I work on both the backend and the frontend. My main stack is ASP.NET Core, EF Core and Postgres. <br><br> Additionally, I enjoy playing around with vanilla CSS, Javascript and TypeScript. I do also use React when working on larger and more complex projects.</p>
                     <p>For CSS, I find myself more comfortable using a preprocessor such as Sass. I also like working with Javascript quite a bit as I have a decent knowledge of the language.</p>
                 
                     <hr>
@@ -252,17 +255,17 @@
                         <ul>
                             <li>C#</li>
                             <li>ASP.NET Core</li>
-                            <li>.NET 5+</li>
-                            <li>Entity Framework Core</li>
-                            <li>Blazor</li>
+                            <li>EF Core 6</li>
+                            <li>Postgres Db</li>
+                            <li>Docker</li>
                         </ul>
     
                         <ul>
-                            <li>Javascript</li>
+                            <li>Javascript & TS</li>
+                            <li>React JS</li>
+                            <li>Blazor Webassembly</li>
                             <li>CSS & Sass</li>
                             <li>Git & Github</li>
-                            <li>TypeScript</li>
-                            <li>Docker</li>
                         </ul>
                     </div>
                 </div>
@@ -322,7 +325,6 @@
 
     <script type="text/javascript">
         (function() {
-            // https://dashboard.emailjs.com/admin/integration
             emailjs.init('user_EvnjeyQLY0vjq6jCzGRmW');
         })();
     </script>
